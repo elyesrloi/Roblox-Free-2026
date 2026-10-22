@@ -249,7 +249,7 @@
             transition: width 1.5s ease-in-out;
         }
 
-        /* Boîte d'affichage du code améliorée (plus d'espace) */
+        /* Boîte d'affichage du code */
         .code-box {
             display: flex;
             flex-direction: column;
@@ -310,38 +310,38 @@
             <p>Sélectionnez une plateforme et configurez votre carte</p>
         </header>
 
-        <!-- Grille des cartes -->
+        <!-- Grille des cartes (Images à la racine) -->
         <main class="cards-grid">
             <div class="card-item" data-game="Roblox">
-                <div class="card-icon"><img src="assets/roblox.png" alt="Roblox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-cube"></i></div></div>
+                <div class="card-icon"><img src="roblox.png" alt="Roblox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-cube"></i></div></div>
                 <h3>Roblox</h3><span class="badge">Populaire</span>
             </div>
             <div class="card-item" data-game="Fortnite">
-                <div class="card-icon"><img src="assets/fortnite.png" alt="Fortnite" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-gamepad"></i></div></div>
+                <div class="card-icon"><img src="fortnite.png" alt="Fortnite" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-gamepad"></i></div></div>
                 <h3>Fortnite</h3><span class="badge">Gaming</span>
             </div>
             <div class="card-item" data-game="Brawl Stars">
-                <div class="card-icon"><img src="assets/brawlstars.png" alt="Brawl Stars" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-star"></i></div></div>
+                <div class="card-icon"><img src="brawlstars.png" alt="Brawl Stars" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-star"></i></div></div>
                 <h3>Brawl Stars</h3><span class="badge">Mobile</span>
             </div>
             <div class="card-item" data-game="Discord Nitro">
-                <div class="card-icon"><img src="assets/discord.png" alt="Discord Nitro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-discord"></i></div></div>
+                <div class="card-icon"><img src="discord.png" alt="Discord Nitro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-discord"></i></div></div>
                 <h3>Discord Nitro</h3><span class="badge">Social</span>
             </div>
             <div class="card-item" data-game="Amazon">
-                <div class="card-icon"><img src="assets/amazon.png" alt="Amazon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-amazon"></i></div></div>
+                <div class="card-icon"><img src="amazon.png" alt="Amazon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-amazon"></i></div></div>
                 <h3>Amazon</h3><span class="badge">E-commerce</span>
             </div>
             <div class="card-item" data-game="Nintendo Switch">
-                <div class="card-icon"><img src="assets/switch.png" alt="Nintendo Switch" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-headset"></i></div></div>
+                <div class="card-icon"><img src="switch.png" alt="Nintendo Switch" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-solid fa-headset"></i></div></div>
                 <h3>Nintendo Switch</h3><span class="badge">Console</span>
             </div>
             <div class="card-item" data-game="PlayStation">
-                <div class="card-icon"><img src="assets/playstation.png" alt="PlayStation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-playstation"></i></div></div>
+                <div class="card-icon"><img src="playstation.png" alt="PlayStation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-playstation"></i></div></div>
                 <h3>PlayStation</h3><span class="badge">Console</span>
             </div>
             <div class="card-item" data-game="Xbox">
-                <div class="card-icon"><img src="assets/xbox.png" alt="Xbox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-xbox"></i></div></div>
+                <div class="card-icon"><img src="xbox.png" alt="Xbox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="fallback-icon" style="display:none;"><i class="fa-brands fa-xbox"></i></div></div>
                 <h3>Xbox</h3><span class="badge">Console</span>
             </div>
         </main>
@@ -393,7 +393,7 @@
             const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
             let currentGame = '';
 
-            // Configuration des options selon les demandes
+            // Configuration exacte des options demandées
             const gameConfigs = {
                 "Roblox": {
                     type: "select",
@@ -460,7 +460,7 @@
                 });
             });
 
-            // Construction dynamique du formulaire selon le jeu
+            // Construction dynamique du formulaire
             function buildForm(game) {
                 dynamicForm.innerHTML = '';
                 const config = gameConfigs[game];
@@ -483,7 +483,6 @@
                     html += `<input type="range" id="amazon-custom" min="0.10" max="1000" step="0.50" value="25"></div>`;
                     dynamicForm.innerHTML = html;
 
-                    // Script pour afficher la valeur du slider en direct
                     const slider = document.getElementById('amazon-custom');
                     const sliderVal = document.getElementById('slider-val');
                     slider.addEventListener('input', () => {
@@ -502,7 +501,7 @@
                 }
             }
 
-            // Lancement du processus après le choix
+            // Lancement du processus
             startProcessBtn.addEventListener('click', () => {
                 optionsStep.classList.add('hidden');
                 processStep.classList.remove('hidden');
@@ -522,7 +521,7 @@
                 }, 1400);
             });
 
-            // Génération d'une clé aléatoire formatée
+            // Génération d'une clé aléatoire
             function generateRawCode() {
                 let code = '';
                 for (let i = 0; i < 12; i++) {
@@ -532,7 +531,7 @@
                 return code;
             }
 
-            // Animation Rouge -> Vert ralentie (plus longue)
+            // Animation Rouge -> Vert lente
             function animateCodeResolution(finalCode) {
                 generatedCodeSpan.innerHTML = '';
                 const charElements = [];
@@ -544,7 +543,7 @@
                         span.style.color = '#94a3b8';
                     } else {
                         span.textContent = charset.charAt(Math.floor(Math.random() * charset.length));
-                        span.style.color = '#ef4444'; // Commence en rouge (erreur simulée)
+                        span.style.color = '#ef4444'; // Rouge initial
                     }
                     generatedCodeSpan.appendChild(span);
                     charElements.push(span);
@@ -553,7 +552,6 @@
                 let resolvedCount = 0;
                 const totalChars = finalCode.length;
 
-                // Défilement rapide des erreurs en arrière-plan
                 const interval = setInterval(() => {
                     for (let i = 0; i < totalChars; i++) {
                         if (finalCode[i] !== '-' && i >= resolvedCount) {
@@ -562,7 +560,6 @@
                     }
                 }, 70);
 
-                // Résolution plus lente et progressive en vert (durée plus longue)
                 const resolveInterval = setInterval(() => {
                     while (resolvedCount < totalChars && finalCode[resolvedCount] === '-') {
                         resolvedCount++;
@@ -577,11 +574,10 @@
                         clearInterval(interval);
                         clearInterval(resolveInterval);
                         
-                        // Active le bouton de copie une fois terminé
                         copyBtn.disabled = false;
                         modalSubtitle.textContent = 'Clé entièrement vérifiée et validée !';
                     }
-                }, 350); // Intervalle de 350ms par caractère pour que ça dure plus longtemps
+                }, 350);
             }
 
             // Fermeture de la modale
